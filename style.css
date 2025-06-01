@@ -1,0 +1,205 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #90caf9;
+}
+
+nav {
+  float: right;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #90caf9;
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #e3f2fd;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: #90caf9;
+  color: #121212;
+  padding: 12px 30px;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #64b5f6;
+  outline: none;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #90caf9;
+  border-bottom: 2px solid #90caf9;
+  padding-bottom: 5px;
+}
+
+/* About Section */
+.about {
+  padding: 50px 0;
+  animation: fadeIn 1.5s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 0;
+  animation: fadeIn 1.5s ease 1s forwards;
+  opacity: 0;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(144, 202, 249, 0.8);
+}
+
+.project-card h3 {
+  margin-bottom: 15px;
+  color: #64b5f6;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 0;
+  animation: fadeIn 1.5s ease 1.5s forwards;
+  opacity: 0;
+}
+
+.contact a {
+  color: #90caf9;
+  text-decoration: none;
+}
+
+.contact a:hover,
+.contact a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav {
+    float: none;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
